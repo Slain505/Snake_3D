@@ -9,7 +9,9 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager scoreManager;
     public TextMeshProUGUI scoreText;
-    int score = 0;
+    public TextMeshProUGUI highScoreText;
+    private int score = 0;
+    private int highScore = 0;
 
     private void Awake()
     {
@@ -18,12 +20,18 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = score.ToString(); 
+        highScore = PlayerPrefs.GetInt("highScore", 0);
+        scoreText.text = score.ToString();
+        highScoreText.text = highScore.ToString();
     }
     
     public void AddPoint()
     {
         score++;
         scoreText.text = score.ToString();
+        if (highScore < score)
+        {
+            PlayerPrefs.SetInt("highScore", score);
+        }
     }
 }
