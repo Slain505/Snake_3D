@@ -34,4 +34,25 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("highScore", score);
         }
     }
+    
+    public void LosePoint()
+    {
+        score--;
+        scoreText.text = score.ToString();
+        if (highScore < score)
+        {
+            PlayerPrefs.SetInt("highScore", score);
+        }
+    }
+    
+    protected internal void ErasePoints()
+    {
+        score = 0;
+        scoreText.text = score.ToString();
+        if (highScore < score)
+        {
+            PlayerPrefs.SetInt("highScore", score);
+        }
+    }
+    
 }
