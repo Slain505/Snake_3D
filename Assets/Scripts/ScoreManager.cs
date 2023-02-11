@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager scoreManager;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
     public Button resetButton;
@@ -16,7 +15,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        scoreManager = this;
+
     }
 
     void Start()

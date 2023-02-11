@@ -7,6 +7,7 @@ using UnityEngine.Networking.PlayerConnection;
 public class Wall : MonoBehaviour
 {
     [SerializeField] public GameObject player, body;
+    public ScoreManager scoreManager;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +15,7 @@ public class Wall : MonoBehaviour
         {
             Destroy(player);
             Destroy(body);
-            ScoreManager.scoreManager.ErasePoints();
+            scoreManager.ErasePoints();
             Debug.Log("You're dead man");
         }
         

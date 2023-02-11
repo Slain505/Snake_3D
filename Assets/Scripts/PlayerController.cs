@@ -23,18 +23,15 @@ namespace Snake
 
         private void Awake()
         {
-            pc = this;
+
         }
 
         private void Start()
         {
             Debug.Log("Game Start!");
-            SnakeAddParts();
-            SnakeAddParts();
-            SnakeAddParts();
-            SnakeAddParts();
+            InitBody();
         }
-
+        // Create new script for Snake as Subject(Low level code in another script - high level code in this script)
         private void FixedUpdate()
         {
             transform.position += transform.forward * speed * Time.deltaTime;
@@ -42,7 +39,7 @@ namespace Snake
             transform.Rotate(Vector3.up * steerSpeed * steerDirection * Time.deltaTime);
 
             moveHistory.Insert(0, transform.position);
-
+            
             int index = 0;
             foreach (var body in bodyParts)
             {
@@ -53,11 +50,20 @@ namespace Snake
                 index++;
             }
         }
-
+        
+        // Create new script for Snake as Subject(Low level code in another script - high level code in this script)
         public void SnakeAddParts()
         {
             GameObject body = Instantiate(bodyPref, bodyParent.transform);
             bodyParts.Add(body);
+        }
+        
+        public void InitBody()
+        {
+            SnakeAddParts();
+            SnakeAddParts();
+            SnakeAddParts();
+            SnakeAddParts();
         }
     }
 }
