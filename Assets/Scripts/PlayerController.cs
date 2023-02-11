@@ -35,7 +35,7 @@ namespace Snake
             SnakeAddParts();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             transform.position += transform.forward * speed * Time.deltaTime;
             float steerDirection = Input.GetAxis("Horizontal");
