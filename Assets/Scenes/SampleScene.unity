@@ -275,6 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0643a8b33df04174a8588ad9444a05b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 468540293}
+  scoreManager: {fileID: 1400903459}
 --- !u!1 &468540292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7002866664197912356, guid: f70747bcc890a504da35d34b79ddeb23, type: 3}
@@ -674,13 +676,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 752d1ed1eaaab104096dc9af6f087ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothSpeed: 15
-  offset: {x: 0, y: 2.5, z: -5.5}
+  offset: {x: 0, y: 2.5, z: 0}
   snakeHead: {fileID: 468540302}
 --- !u!1 &969635029
 GameObject:
@@ -1192,6 +1193,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 468540292}
+    - target: {fileID: 529893992458733981, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1400903459}
     - target: {fileID: 2599867149761179854, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
       propertyPath: body
       value: 
@@ -1200,6 +1205,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 468540292}
+    - target: {fileID: 2599867149761179854, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1400903459}
     - target: {fileID: 3263850195938782500, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
       propertyPath: body
       value: 
@@ -1208,6 +1217,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 468540292}
+    - target: {fileID: 3263850195938782500, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1400903459}
     - target: {fileID: 4307147070806260611, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
       propertyPath: m_Name
       value: Wall
@@ -1280,6 +1293,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 468540292}
+    - target: {fileID: 4307147071632113873, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 1400903459}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f91e8f65b805941a4856fe97ad12bf, type: 3}
 --- !u!1001 &5197704409574816035

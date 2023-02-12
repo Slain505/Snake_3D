@@ -11,11 +11,12 @@ namespace Snake
     public class Fruit : MonoBehaviour
     {
         public PlayerController playerController;
+        public GameObject fruit;
         public ScoreManager scoreManager;
         // public TextMeshPro score; 
         private void OnTriggerEnter(Collider other)
         {
-            if (GameObject.FindWithTag("apple"))
+            if (fruit)
             {
                 Vector3 randomSpawnPosition = new Vector3(Random.Range(-13, 11), 1.2f, Random.Range(-24, -1));
                 transform.position = randomSpawnPosition;

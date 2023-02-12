@@ -17,6 +17,6 @@ class CameraController : MonoBehaviour
         Vector3 desiredPosition = snakeHead.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
-        transform.rotation = snakeHead.rotation;
+        transform.rotation = new Quaternion(0.240609154f, 0, 0, snakeHead.rotation.w);
     }
 }
