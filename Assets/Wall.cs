@@ -6,12 +6,14 @@ using UnityEngine.Networking.PlayerConnection;
 
 public class Wall : MonoBehaviour
 {
-    [SerializeField] public GameObject player, body;
-    public ScoreManager scoreManager;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject body;
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private ScoreManager scoreManager;
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<PlayerController>(out var playerController))
+        if (other.TryGetComponent<PlayerController>(out _))
         {
             Destroy(player);
             Destroy(body);

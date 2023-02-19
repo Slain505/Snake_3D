@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HighscoreReset : MonoBehaviour
 {
-    public ScoreManager scoreManager;
+    [SerializeField] private ScoreManager scoreManager;
     
     private void Start()
     {
