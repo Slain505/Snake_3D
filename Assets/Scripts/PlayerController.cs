@@ -15,6 +15,7 @@ namespace Snake
         [SerializeField] public int gap = 15;
         [SerializeField] public float bodySpeed = 5;
         [SerializeField] private BodyController bodyController;
+        public bool isMoving;
 
         private void Start()
         {

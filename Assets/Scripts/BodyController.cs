@@ -35,5 +35,10 @@ public class BodyController : MonoBehaviour
         GameObject body = Instantiate(bodyPref, bodyParent.transform);
         bodyParts.Add(body);
     }
+
+    private void DeletePlayerPart()
+    {
+        
+    }
     
 }
