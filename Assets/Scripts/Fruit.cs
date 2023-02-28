@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Snake.Consumable;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -13,14 +14,17 @@ namespace Snake
         [SerializeField] private PlayerController playerController;
         [SerializeField] private BodyController bodyController;
         [SerializeField] private ScoreManager scoreManager;
+        [SerializeField] private ConsumableController consumableController;
         // public TextMeshPro score; 
         private void OnTriggerEnter(Collider other)
         {
             if (other.TryGetComponent<PlayerController>(out _))
             {
-                //Change to Generator code
-                Vector3 randomSpawnPosition = new Vector3(Random.Range(-13, 11), 1.2f, Random.Range(-24, -1));
-                transform.position = randomSpawnPosition;
+                // //Change to Generator code
+                // Vector3 randomSpawnPosition = new Vector3(Random.Range(-13, 11), 1.2f, Random.Range(-24, -1));
+                // transform.position = randomSpawnPosition;
+                consumableController.FruitDestroy(gameObject);
+                
                 
                 
                 bodyController.AddPlayerParts();
@@ -28,5 +32,6 @@ namespace Snake
                 Debug.Log("UwU +1");
             }
         }
+        
     }
 }

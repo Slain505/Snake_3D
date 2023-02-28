@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6663950829912354044}
   - component: {fileID: 451630522397470149}
   - component: {fileID: 4402793963927681307}
+  - component: {fileID: 5661188394694570767}
   m_Layer: 0
   m_Name: Fruit
-  m_TagString: Untagged
+  m_TagString: apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,8 +93,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2884722524857074248}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5661188394694570767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2884722524857074248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0643a8b33df04174a8588ad9444a05b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 468540293, guid: f70747bcc890a504da35d34b79ddeb23, type: 3}
+  bodyController: {fileID: 4810622019801561513, guid: b32a5ef3e5eab784aa48c8290d71f7a2, type: 3}
+  scoreManager: {fileID: 1931741427364579111, guid: 1b02d0aefbe86db439facd6d77553595, type: 3}
+  consumableController: {fileID: 1950368637453855258, guid: 50919bc5404047644acd39df0a798b64, type: 3}
