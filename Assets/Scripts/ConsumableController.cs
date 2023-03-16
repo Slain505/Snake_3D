@@ -44,7 +44,6 @@ namespace Snake.Consumable
             GameObject fruit = Instantiate(fruitPrefab, position, Quaternion.identity);
 
             fruits.Add(fruit);
-            fruit.AddComponent<Fruit>();
         }
 
         private Vector3 GetRandomSpawnPosition()

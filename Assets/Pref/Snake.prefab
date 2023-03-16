@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5109480863793536344}
   - component: {fileID: 468540298}
   - component: {fileID: 468540293}
-  - component: {fileID: 468540310}
+  - component: {fileID: 7954011092822577605}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -132,9 +132,9 @@ MonoBehaviour:
   speed: 5
   gap: 10
   bodySpeed: 5
-  bodyController: {fileID: 0}
+  bodyController: {fileID: 7954011092822577605}
   isMoving: 0
---- !u!114 &468540310
+--- !u!114 &7954011092822577605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,6 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyPref: {fileID: 7842777741025600298, guid: dfb63db43538ebb4899d9c5b782631dd, type: 3}
-  bodyParent: {fileID: 0}
   playerObject: {fileID: 7002866664197912356}
   playerController: {fileID: 468540293}

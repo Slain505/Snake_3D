@@ -9,16 +9,12 @@ public class BodyController : MonoBehaviour
     private List<GameObject> bodyParts = new List<GameObject>();
     private List<Vector3> moveHistory = new List<Vector3>();
     [SerializeField] private GameObject bodyPref;
-    [SerializeField] private GameObject bodyParent;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private PlayerController playerController;
-    
-
     
     public void SavePlayerHistory()
     {
         moveHistory.Insert(0, playerObject.transform.position);
-            
         int index = 0;
         foreach (var body in bodyParts)
         {
@@ -32,7 +28,7 @@ public class BodyController : MonoBehaviour
     
     public void AddPlayerParts()
     {
-        GameObject body = Instantiate(bodyPref, bodyParent.transform);
+        GameObject body = Instantiate(bodyPref);
         bodyParts.Add(body);
     }
 

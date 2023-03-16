@@ -111,6 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 468540293, guid: f70747bcc890a504da35d34b79ddeb23, type: 3}
-  bodyController: {fileID: 4810622019801561513, guid: b32a5ef3e5eab784aa48c8290d71f7a2, type: 3}
+  bodyController: {fileID: 7954011092822577605, guid: f70747bcc890a504da35d34b79ddeb23, type: 3}
   scoreManager: {fileID: 1931741427364579111, guid: 1b02d0aefbe86db439facd6d77553595, type: 3}
   consumableController: {fileID: 1950368637453855258, guid: 50919bc5404047644acd39df0a798b64, type: 3}
